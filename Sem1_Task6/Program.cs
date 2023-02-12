@@ -7,7 +7,7 @@
 
         Console.Clear();
         Console.Write("Введите первое число: ");
-        int num = int.Parse(Console.ReadLine());
+        int num = Convert.ToInt32(Console.ReadLine());
 
         switch (num % 2)
         {

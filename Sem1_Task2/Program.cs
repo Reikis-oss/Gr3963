@@ -7,9 +7,9 @@
 
         Console.Clear();
         Console.Write("Введите первое число: ");
-        int num1 = int.Parse(Console.ReadLine());
+        int num1 = Convert.ToInt32(Console.ReadLine());
         Console.Write("Введите второе число: ");
-        int num2 = int.Parse(Console.ReadLine());
+        int num2 = Convert.ToInt32(Console.ReadLine());
 
             if (Math.Max(num1, num2) == num1)
             Console.WriteLine($"Максимальное число = {num1}");
