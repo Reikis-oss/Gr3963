@@ -6,24 +6,28 @@
                 541546584   ->  1
 */
 
-for (; ; )
+for (; ; )// бесконечный цикл
 {
+    //очищаем консоль
     Console.Clear();
+    // Вводим переменные
     Console.Write("Введите трёхзначное число: ");
     int num = Convert.ToInt32(Console.ReadLine());
-    int numLength = num.ToString().Length;
-    if (numLength > 2)
+    int numLength = num.ToString().Length; //узнаём длину числа
+    if (numLength > 2)//проверяем что бы длина была больше 2
     {
+        //Узнаём на какое количество десятков нужно укоротить наше число
         int i = 0;
         for (; i < numLength - 3; i++)
         {
         }
+        //уменьшаем введёное число до 3 знаков и выводим
         num = (int)(num / Math.Pow(10, i));
         Console.WriteLine($"Третья цифра заданного числа = {num % 10}");
         break;
     }
     else
-    {
+    { // Выводим сообщение об ошибке и просим пользователя повторно ввести данные
         Console.WriteLine("Третьей цифры нет" +
                                 "\nПопробуйте ещё раз");
         Console.WriteLine("\n\nНажмите любую кнопку для продолжения");

@@ -5,7 +5,8 @@
 
 
 Console.Clear();
-
+// при обьявлении Dictionary в <> мы указываем 2 типа данных в которых будут хранится данные
+// 1 отвечает за ключ, 2 за содержание ключа
 Dictionary<int, string> dic = new Dictionary<int, string>
 {
     [1] = "Рабочий день",
@@ -18,22 +19,23 @@ Dictionary<int, string> dic = new Dictionary<int, string>
 };
 
 
-for (; ; )
+for (; ; ) //Бесконечный цикл
 {
+    //Вводим переменную
     Console.Write("Введите цифру от 1 до 7: ");
     int dayOfWeek = Convert.ToInt32(Console.ReadLine());
 
+    // Делаем проверку что введёна цифра от 1 до 7
     if ((dayOfWeek > 0) && (dayOfWeek < 8))
-    {
+    { //выводим по ключу данные и выходим из цикла
         Console.WriteLine($"Выбраное вами число является - {dic[dayOfWeek]}");
         break;
     }
     else
-    {
+    { // Выводим сообщение об ошибке и просим пользователя повторно ввести данные
         Console.WriteLine("Вы ввели не день недели" +
             "\nпропробуйте ещё раз" +
             "\n\n\n Нажмите любую кнопку для продолжения");
         Console.ReadKey();
-
     }
 }
