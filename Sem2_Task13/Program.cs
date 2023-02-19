@@ -11,7 +11,7 @@ for (; ; )// бесконечный цикл
     //очищаем консоль
     Console.Clear();
     // Вводим переменные
-    Console.Write("Введите трёхзначное число: ");
+    Console.Write("Введите число: ");
     int num = Convert.ToInt32(Console.ReadLine());
     int numLength = num.ToString().Length; //узнаём длину числа
     if (numLength > 2)//проверяем что бы длина была больше 2
